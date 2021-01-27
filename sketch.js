@@ -14,8 +14,7 @@ function draw() {
   z.x=World.mouseX;
   z.y=World.mouseY;
 
-  if(z.x-g.x<g.width/2+z.width/2&&
-    g.x-z.x>g.width/2+z.width/2)
+  if(atouching())
   {
     z.shapeColor="black";
     g.shapeColor="black";
@@ -26,5 +25,17 @@ function draw() {
   }
   drawSprites();
 }
-
+function atouching()
+{
+  if(z.x-g.x<g.width/2+z.width/2&&
+    g.x-z.x<g.width/2+z.width/2&&
+    z.y-g.y<g.height/2+z.height/2&&
+    g.y-z.y<g.height/2+z.height/2)
+  {
+    return true;
+  }
+  else{
+      return false;
+  }
+}
 
