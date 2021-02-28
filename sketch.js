@@ -9,7 +9,7 @@ function setup() {
   h.velocityY=2;
   z.debug=true;
   g.debug=true;
-  z.shapeColor="red"
+  z.shapeColor="pink"
   g.shapeColor="red";
 }
 
